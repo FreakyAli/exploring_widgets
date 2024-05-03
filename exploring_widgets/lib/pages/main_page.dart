@@ -1,9 +1,5 @@
-import 'package:exploring_widgets/pages/buttons.dart';
 import 'package:flutter/material.dart';
-
-const String buttonsScreen = 'Buttons';
-
-const List<String> widgets = [buttonsScreen];
+import 'package:exploring_widgets/my_app.dart';
 
 class MainPage extends StatelessWidget {
   const MainPage({super.key});
@@ -14,26 +10,24 @@ class MainPage extends StatelessWidget {
       appBar: AppBar(
         title: const Center(child: Text('Main page')),
       ),
-      body: Center(
-        child: ListView.builder(
-          padding: const EdgeInsets.all(10),
-          itemCount: widgets.length,
-          itemBuilder: (context, index) {
-            return InkWell(
-              onTap: () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const ButtonsPage()),
-                )
-              },
-              child: ListTile(
-                title: Text(
-                  "Widget: ${widgets[index]}",
-                ),
+      body: ListView.builder(
+        padding: const EdgeInsets.all(10),
+        itemCount: widgets.length,
+        itemBuilder: (context, index) {
+          return InkWell(
+            onTap: () => {
+              Navigator.pushNamed(
+                context,
+                widgets[index],
               ),
-            );
-          },
-        ),
+            },
+            child: ListTile(
+              title: Text(
+                widgets[index],
+              ),
+            ),
+          );
+        },
       ),
     );
   }

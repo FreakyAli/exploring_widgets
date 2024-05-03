@@ -1,14 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class ButtonsPage extends StatefulWidget {
+class ButtonsPage extends StatelessWidget {
   const ButtonsPage({super.key});
 
-  @override
-  State<ButtonsPage> createState() => _ButtonsPageState();
-}
-
-class _ButtonsPageState extends State<ButtonsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,7 +21,6 @@ class _ButtonsPageState extends State<ButtonsPage> {
         padding: const EdgeInsets.all(20.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             OutlinedButton(
               onPressed: () {},
@@ -91,9 +85,9 @@ class _ButtonsPageState extends State<ButtonsPage> {
               height: 20,
             ),
             CupertinoButton(
-              child: const Text('This is cupertino button'),
               onPressed: () {},
               color: Colors.lightBlue,
+              child: const Text('This is cupertino button'),
             ),
             const SizedBox(
               height: 20,

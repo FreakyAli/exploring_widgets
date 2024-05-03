@@ -1,4 +1,4 @@
-import 'package:exploring_widgets/initializers/my_app.dart';
+import 'package:exploring_widgets/my_app.dart';
 import 'package:flutter/material.dart';
 
 void main() {
